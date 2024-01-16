@@ -65,6 +65,66 @@
         console.log(resultado2)
     }
 
-    method_filter()
+    //method_filter()
+
+    //METODO FIND
+
+    let method_find = () => {
+        let result
+        producto.forEach((prod,index)=>{
+            if (prod.descripcion === 'Frijol'){
+                result = producto[index].descripcion
+            }
+        })
+
+        let resultado = producto.find(prod => prod.descripcion === 'Frijol')
+
+        console.log(result)
+        console.log(resultado.precio)
+    }
+
+    //method_find()
+
+    //METODO EVERY
+    let method_every = ()=>{
+        const result = producto.every( prod => prod.precio > 1)
+
+        if (result) {
+            console.log("Todos los precios son mayores a 1")
+        }
+
+    }
+
+    //method_every()
+
+
+    //METODO CONCAT
+    let method_concat = ()=>{
+        const primerosMeses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio']
+        const segundosMeses = ['Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
+
+        const unionMeses = primerosMeses.concat(segundosMeses)
+
+        unionMeses.map(mes => (console.log(mes  )))
+
+        //CON SPRED OPERATION
+        const mesesUnion = [...primerosMeses , ...segundosMeses]
+        mesesUnion.map(mes => console.log(mes))
+
+    }
+
+   // method_concat()
+
+    //SPRED OPERATOR
+    let method_spred_operator = ()=>{
+        
+    }
+
+
+
+
+
+
+
 
 })()
