@@ -29,6 +29,42 @@
         }
     }
 
-    method_some()
+    //method_some()
+
+    let method_findIndex = ()=>{
+        let miIndice = dias.findIndex( dia => dia === 'Jueves')
+
+        console.log(miIndice)
+
+
+        let productoBuscar = 'Maiz'
+        let miProducto = producto.findIndex( prod => prod.descripcion === productoBuscar)
+        console.log(`El producto ${productoBuscar} se encuentra en la posicion ${miProducto}`)
+
+    }
+
+    //method_findIndex()
+
+    const method_reduce = () =>{
+        let total = 0
+        producto.forEach( prod => total+= prod.precio)
+        console.log(total)
+
+        let result = producto.reduce((total,prod) => total + prod.precio,0)
+        console.log(result)
+    }
+
+    //method_reduce()
+
+    //METODO FILTER
+    let method_filter = ()=>{
+        let resultado,resultado2
+        resultado = producto.filter(prod => prod.precio > 5.50 )
+        resultado2 = producto.filter(producto => producto.descripcion === "Frijol")
+        console.log(resultado)
+        console.log(resultado2)
+    }
+
+    method_filter()
 
 })()
